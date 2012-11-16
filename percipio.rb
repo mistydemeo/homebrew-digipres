@@ -9,10 +9,7 @@ class Percipio < Formula
 
   def install
     libexec.install "percipio.jar"
-    (bin/"percipio").write <<-EOS.undent
-    #!/bin/sh
-    java -jar #{libexec}/percipio.jar
-    EOS
+    bin.write_jar_script libexec/"percipio.jar", "percipio"
   end
 
   def test
