@@ -1,17 +1,16 @@
 require 'formula'
 
 class Droid < Formula
-  homepage 'http://droid.sourceforge.net/'
-  url 'http://downloads.sourceforge.net/project/droid/droid/6.0/droid-6.01.zip'
-  version '6.01'
-  sha1 '5a2038060a56a159edd2b771d4744aea7ee1444a'
+  homepage 'http://digital-preservation.github.com/droid/'
+  url 'https://github.com/downloads/digital-preservation/droid/droid-binary-6.1-bin.zip'
+  sha1 '4db9eba7acd39a0dd90700a81847de83b00acdcb'
 
   def install
     libexec.install Dir['*.jar']
     libexec.install "lib"
     inreplace "droid.sh" do |s|
-      s.gsub! "droid-command-line-6.0.jar", "#{libexec}/droid-command-line-6.0.jar"
-      s.gsub! "droid-ui-6.0.jar", "#{libexec}/droid-ui-6.0.jar"
+      s.gsub! "droid-command-line-6.1.jar", "#{libexec}/droid-command-line-6.1.jar"
+      s.gsub! "droid-ui-6.1.jar", "#{libexec}/droid-ui-6.1.jar"
     end
     bin.install "droid.sh" => "droid"
   end
