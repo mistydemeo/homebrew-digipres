@@ -6,6 +6,17 @@ tools.
 
 To install, you first need to: `brew tap mistydemeo/digipres`
 
+Contributing
+------------
+
+* Fork this repository on Github
+* Create a new branch (`git checkout -b mybranch`)
+* `brew edit` the formula, or `brew create` a new one and place it in the repository in /usr/local/Library/Taps/mistydemeo-digipres
+* `git add` your file, then `git commit` with a descriptive commit message
+* Submit a pull request
+
+And I'll merge it! Thanks!
+
 Available tools
 ---------------
 
