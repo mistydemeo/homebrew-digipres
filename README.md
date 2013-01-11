@@ -29,6 +29,10 @@ AVI metadata editing tool from NARA.
 
 File identification tool from the National Archives (UK), based on information from PRONOM.
 
+### [dvanalyzer](http://www.avpreserve.com/dvanalyzer/)
+
+Tool for analyzing the properties of captured DV video.
+
 ### [fidget](https://github.com/openplanets/format-corpus)
 
 Tool for creation of new file identification signatures, from Open Planets.
