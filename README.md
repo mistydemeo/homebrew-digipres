@@ -42,6 +42,10 @@ Tool for creation of new file identification signatures, from Open Planets.
 JSTOR/Harvard Object Validation Environment, intended to identify and validate the correctness
 of digital objects.
 
+### [JHOVE2](https://bitbucket.org/jhove2/main/wiki/Home)
+
+Next-generation version of JHOVE.
+
 ### [Metadata Extraction Tool](http://meta-extractor.sourceforge.net/)
 
 Metadata extraction tool developed by the National Library of New Zealand.
