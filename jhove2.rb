@@ -12,8 +12,4 @@ class Jhove2 < Formula
     libexec.install Dir['*']
     (bin/'jhove2').make_relative_symlink libexec/'jhove2.sh'
   end
-
-  test do
-    system "false"
-  end
 end
