@@ -12,9 +12,6 @@ class Jhove < Formula
       s.change_make_var! "JHOVE_HOME", libexec
       s.change_make_var! "JAVA_HOME", "/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home"
       s.gsub! "${JHOVE_HOME}/bin/", "${JHOVE_HOME}/"
-
-      # this is a fix for a bug which should be fixed soon
-      s.change_make_var! "EXTRA_JARS", "${JHOVE_HOME}/JhoveView.jar"
     end
 
     bin.install "jhove.tmpl" => "jhove"
