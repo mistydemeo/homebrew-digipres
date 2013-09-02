@@ -2,9 +2,9 @@ require 'formula'
 
 class Jhove < Formula
   homepage 'http://jhove.sourceforge.net/'
-  url 'http://downloads.sourceforge.net/project/jhove/jhove/JHOVE%201.8/jhove-1_8.tar.gz'
-  version '1.8'
-  sha1 'f807689a9e7c9074996e2a2fb209e53066b7e6f3'
+  url 'http://downloads.sourceforge.net/project/jhove/jhove/JHOVE%201.10/jhove-1_10.tar.gz'
+  version '1.10'
+  sha1 '3902e6b61d6ab5edf5dac4d9e5673d6560a53a9b'
 
   def install
     inreplace "conf/jhove.conf", "/users/stephen/projects/jhove", libexec
