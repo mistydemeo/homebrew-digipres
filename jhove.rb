@@ -2,8 +2,7 @@ require 'formula'
 
 class Jhove < Formula
   homepage 'http://jhove.sourceforge.net/'
-  url 'http://downloads.sourceforge.net/project/jhove/jhove/JHOVE%201.11/jhove-1_11.tar.gz'
-  version '1.11'
+  url 'https://downloads.sourceforge.net/project/jhove/jhove/JHOVE%201.11/jhove-1_11.tar.gz'
   sha1 'acc5aae97017bdb2206197dc952ae47ee6555f6f'
 
   def install
@@ -19,7 +18,7 @@ class Jhove < Formula
     libexec.install "conf"
   end
 
-  def test
+  test do
     system "#{bin}/jhove"
   end
 end
