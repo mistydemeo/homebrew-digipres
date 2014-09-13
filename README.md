@@ -54,3 +54,8 @@ Metadata extraction tool developed by the National Library of New Zealand.
 
 "Yet another file identification tool", with the ability to refine its own file signatures
 through scanning known-good files.
+
+### [siegfried](http://www.itforarchivists.com/siegfried)
+
+PRONOM signature-based identification tool.
+
