@@ -3,14 +3,24 @@ require "language/go"
 
 class Siegfried < Formula
   homepage "http://www.itforarchivists.com/siegfried"
-  url "https://github.com/richardlehane/siegfried/archive/v0.4.1.tar.gz"
-  sha1 "7e0b8f479cedf41580d152532ce37277394c6f90"
+  url "https://github.com/richardlehane/siegfried/archive/v0.5.0.tar.gz"
+  sha1 "60dc6a1338451dca309e95637fa34ae68c963679"
 
   depends_on "go" => :build
 
   go_resource "github.com/richardlehane/match" do
     url "https://github.com/richardlehane/match.git",
-      :revision => "2e2742c915158c9d189c17da7e80ca95f350b530"
+      :revision => "dbc5ddc0ef24256ecd0af8d8bbc850de452af25d"
+  end
+
+  go_resource "github.com/richardlehane/mscfb" do
+    url "https://github.com/richardlehane/mscfb.git",
+      :revision => "b34882c7c3a53496ef355824887a91e9877f8442"
+  end
+
+  go_resource "github.com/richardlehane/msoleps" do
+    url "https://github.com/richardlehane/msoleps.git",
+      :revision => "c496257da4daf0de7e91d200c01cb5490138151c"
   end
 
   def install
@@ -20,19 +30,19 @@ class Siegfried < Formula
 
     # Avoid installing signature files into the user's home directory;
     # install them into share instead.
-    inreplace "src/github.com/richardlehane/siegfried/cmd/sieg/sieg.go" do |s|
+    inreplace "src/github.com/richardlehane/siegfried/cmd/sf/sf.go" do |s|
       s.gsub! 'filepath.Join(current.HomeDir, ".siegfried"',
         %{filepath.Join("#{share}", "siegfried"}
       s.gsub! "current, err := user.Current()", "_, err := user.Current()"
     end
 
-    system "go", "build", "github.com/richardlehane/siegfried/cmd/sieg"
+    system "go", "build", "github.com/richardlehane/siegfried/cmd/sf"
 
-    bin.install "sieg"
+    bin.install "sf"
     (share/"siegfried").install Dir["src/github.com/richardlehane/siegfried/cmd/r2d2/data/*"]
   end
 
   test do
-    system "#{bin}/sieg", "--version"
+    system "#{bin}/sf", "--version"
   end
 end
