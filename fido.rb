@@ -2,9 +2,9 @@ require 'formula'
 
 class Fido < Formula
   homepage 'https://github.com/openplanets/fido'
-  url 'https://github.com/openplanets/fido/archive/1.3.1-77.tar.gz'
-  sha1 'a40b0c3d0a3db0585f5344db7f8276935324f9a6'
-  version "1.3.1-77"
+  url 'https://github.com/openplanets/fido/archive/1.3.1-78.tar.gz'
+  sha1 '0122a48d122c6d01af5a9f39b03f3bddc35250d3'
+  version "1.3.1-78"
 
   head 'https://github.com/openplanets/fido.git'
 
