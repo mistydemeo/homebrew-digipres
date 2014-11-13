@@ -3,8 +3,8 @@ require "language/go"
 
 class Siegfried < Formula
   homepage "http://www.itforarchivists.com/siegfried"
-  url "https://github.com/richardlehane/siegfried/archive/v0.5.0.tar.gz"
-  sha1 "60dc6a1338451dca309e95637fa34ae68c963679"
+  url "https://github.com/richardlehane/siegfried/archive/v0.6.0.tar.gz"
+  sha1 "2ec3c4281adbf6668eca109cb49d02329201b0cb"
 
   depends_on "go" => :build
 
@@ -15,7 +15,7 @@ class Siegfried < Formula
 
   go_resource "github.com/richardlehane/mscfb" do
     url "https://github.com/richardlehane/mscfb.git",
-      :revision => "b34882c7c3a53496ef355824887a91e9877f8442"
+      :revision => "aef15fee14dd01bd5bb6022e2e665fad7aa6beb7"
   end
 
   go_resource "github.com/richardlehane/msoleps" do
@@ -24,19 +24,16 @@ class Siegfried < Formula
   end
 
   def install
+    # Avoid installing signature files into the user's home directory;
+    # install them into share instead.
+    inreplace "config/brew.go", "/usr/share/siegfried", share/"siegfried"
+
     (buildpath/"src/github.com/richardlehane/siegfried").install Dir["*"]
     Language::Go.stage_deps resources, buildpath/"src"
     ENV["GOPATH"] = buildpath
 
-    # Avoid installing signature files into the user's home directory;
-    # install them into share instead.
-    inreplace "src/github.com/richardlehane/siegfried/cmd/sf/sf.go" do |s|
-      s.gsub! 'filepath.Join(current.HomeDir, ".siegfried"',
-        %{filepath.Join("#{share}", "siegfried"}
-      s.gsub! "current, err := user.Current()", "_, err := user.Current()"
-    end
-
-    system "go", "build", "github.com/richardlehane/siegfried/cmd/sf"
+    system "go", "build", "-tags", "brew",
+                 "github.com/richardlehane/siegfried/cmd/sf"
 
     bin.install "sf"
     (share/"siegfried").install Dir["src/github.com/richardlehane/siegfried/cmd/r2d2/data/*"]
