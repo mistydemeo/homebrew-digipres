@@ -3,8 +3,8 @@ require "language/go"
 
 class Siegfried < Formula
   homepage "http://www.itforarchivists.com/siegfried"
-  url "https://github.com/richardlehane/siegfried/archive/v0.6.0.tar.gz"
-  sha1 "2ec3c4281adbf6668eca109cb49d02329201b0cb"
+  url "https://github.com/richardlehane/siegfried/archive/v0.6.1.tar.gz"
+  sha1 "8f1eba540523859d0e69a03a921dd250ce16ea6c"
 
   depends_on "go" => :build
 
@@ -34,9 +34,11 @@ class Siegfried < Formula
 
     system "go", "build", "-tags", "brew",
                  "github.com/richardlehane/siegfried/cmd/sf"
+    system "go", "build", "-tags", "brew",
+                 "github.com/richardlehane/siegfried/cmd/roy"
 
-    bin.install "sf"
-    (share/"siegfried").install Dir["src/github.com/richardlehane/siegfried/cmd/r2d2/data/*"]
+    bin.install "sf", "roy"
+    (share/"siegfried").install Dir["src/github.com/richardlehane/siegfried/cmd/roy/data/*"]
   end
 
   test do
