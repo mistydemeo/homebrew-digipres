@@ -3,8 +3,8 @@ require "language/go"
 
 class Siegfried < Formula
   homepage "http://www.itforarchivists.com/siegfried"
-  url "https://github.com/richardlehane/siegfried/archive/v0.6.1.tar.gz"
-  sha1 "8f1eba540523859d0e69a03a921dd250ce16ea6c"
+  url "https://github.com/richardlehane/siegfried/archive/v0.7.0.tar.gz"
+  sha1 "2ac871e0777bd45e58e66ee06f74bd40898ad2cc"
 
   depends_on "go" => :build
 
