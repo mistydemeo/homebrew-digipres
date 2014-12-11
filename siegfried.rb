@@ -1,26 +1,27 @@
 require "formula"
 require "language/go"
+require "yaml"
 
 class Siegfried < Formula
   homepage "http://www.itforarchivists.com/siegfried"
-  url "https://github.com/richardlehane/siegfried/archive/v0.7.0.tar.gz"
-  sha1 "2ac871e0777bd45e58e66ee06f74bd40898ad2cc"
+  url "https://github.com/richardlehane/siegfried/archive/v0.7.1.tar.gz"
+  sha1 "e84da0c707374566c77da6ccf76318e7385c3868"
 
   depends_on "go" => :build
 
   go_resource "github.com/richardlehane/match" do
     url "https://github.com/richardlehane/match.git",
-      :revision => "dbc5ddc0ef24256ecd0af8d8bbc850de452af25d"
+      :revision => "caa08bef8eaeb68b5caaf96dfce065345a29eea5"
   end
 
   go_resource "github.com/richardlehane/mscfb" do
     url "https://github.com/richardlehane/mscfb.git",
-      :revision => "aef15fee14dd01bd5bb6022e2e665fad7aa6beb7"
+      :revision => "2b7410e9dbb9fae3b308d30defe35f5a5c1d2302"
   end
 
   go_resource "github.com/richardlehane/msoleps" do
     url "https://github.com/richardlehane/msoleps.git",
-      :revision => "c496257da4daf0de7e91d200c01cb5490138151c"
+      :revision => "4635cd3117f588db451e08144c8e26567c6a6b88"
   end
 
   def install
@@ -42,6 +43,8 @@ class Siegfried < Formula
   end
 
   test do
-    system "#{bin}/sf", "--version"
+    results = YAML.load_documents `"#{bin}/sf" "#{test_fixtures("test.jpg")}"`
+    assert_equal version.to_s, results[0]["siegfried"]
+    assert_equal "fmt/43", results[1]["matches"][0]["puid"]
   end
 end
