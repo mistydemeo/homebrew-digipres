@@ -4,24 +4,29 @@ require "yaml"
 
 class Siegfried < Formula
   homepage "http://www.itforarchivists.com/siegfried"
-  url "https://github.com/richardlehane/siegfried/archive/v0.7.1.tar.gz"
-  sha1 "e84da0c707374566c77da6ccf76318e7385c3868"
+  url "https://github.com/richardlehane/siegfried/archive/v0.8.3.tar.gz"
+  sha1 "4ceed2844bf18760805948429771b334801680ea"
 
   depends_on "go" => :build
 
   go_resource "github.com/richardlehane/match" do
     url "https://github.com/richardlehane/match.git",
-      :revision => "caa08bef8eaeb68b5caaf96dfce065345a29eea5"
+      :revision => "786a5a13b1bf9f4757385d2efa3e5c5f16122569"
   end
 
   go_resource "github.com/richardlehane/mscfb" do
     url "https://github.com/richardlehane/mscfb.git",
-      :revision => "2b7410e9dbb9fae3b308d30defe35f5a5c1d2302"
+      :revision => "38b6a8d3da3c578ba4b337e7ed5beba601469776"
   end
 
   go_resource "github.com/richardlehane/msoleps" do
     url "https://github.com/richardlehane/msoleps.git",
-      :revision => "4635cd3117f588db451e08144c8e26567c6a6b88"
+      :revision => "b0830452f54a0c927d81dd529ee6da770218fee8"
+  end
+
+  go_resource "golang.org/x/sys" do
+    url "https://github.com/golang/sys.git",
+      :revision => "28779c6daddbd86e5286abf21ad66ad9b02de278"
   end
 
   def install
