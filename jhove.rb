@@ -1,8 +1,6 @@
-require 'formula'
-
 class Jhove < Formula
-  homepage 'http://jhove.sourceforge.net/'
-  url 'https://downloads.sourceforge.net/project/jhove/jhove/JHOVE%201.11/jhove-1_11.tar.gz'
+  homepage 'http://jhove.openpreservation.org/'
+  url 'https://github.com/openpreserve/jhove/releases/download/v1.11/jhove-1_11.tar.gz'
   sha1 'acc5aae97017bdb2206197dc952ae47ee6555f6f'
 
   def install
