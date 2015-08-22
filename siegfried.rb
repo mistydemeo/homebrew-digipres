@@ -34,6 +34,11 @@ class Siegfried < Formula
       :revision => "c6f86e98fec95d92e83fd316827cd0f709f32fcd"
   end
 
+  go_resource "golang.org/x/text" do
+    url "https://github.com/golang/text.git",
+      :revision => "723492b65e225eafcba054e76ba18bb9c5ac1ea2"
+  end
+
   def install
     # Avoid installing signature files into the user's home directory;
     # install them into share instead.
