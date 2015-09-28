@@ -4,14 +4,14 @@ require "yaml"
 
 class Siegfried < Formula
   homepage "http://www.itforarchivists.com/siegfried"
-  url "https://github.com/richardlehane/siegfried/archive/v1.2.2.tar.gz"
-  sha256 "27225beabf51451b404487292fa87619505e66baf67e3d706bcfc74e79471352"
+  url "https://github.com/richardlehane/siegfried/archive/v1.3.0.tar.gz"
+  sha256 "ee71067ed34cca00f17693fb8a6d29f7a0bf7a7c6c24281ff6613e8a86b68501"
 
   depends_on "go" => :build
 
   go_resource "github.com/richardlehane/match" do
     url "https://github.com/richardlehane/match.git",
-      :revision => "77bb91e49e7ec76ea836473745c056eac3a83693"
+      :revision => "7c390096adf3be6b48beb741e0d186560edfd820"
   end
 
   go_resource "github.com/richardlehane/characterize" do
@@ -29,14 +29,19 @@ class Siegfried < Formula
       :revision => "6d977ed9e93a2ee68aec2154f2b5f5a9756fc3de"
   end
 
+  go_resource "github.com/richardlehane/webarchive" do
+    url "https://github.com/richardlehane/webarchive.git",
+      :revision => "f75bd3a4e1c0b76f023e3cca183e2afda932031b"
+  end
+
   go_resource "golang.org/x/sys" do
     url "https://github.com/golang/sys.git",
-      :revision => "c6f86e98fec95d92e83fd316827cd0f709f32fcd"
+      :revision => "342d6a85aa15bcd2ec54803cdffe90d52b6f35a7"
   end
 
   go_resource "golang.org/x/text" do
     url "https://github.com/golang/text.git",
-      :revision => "723492b65e225eafcba054e76ba18bb9c5ac1ea2"
+      :revision => "601048ad6acbab6cedd582db09b8c4839ff25b15"
   end
 
   def install
