@@ -1,8 +1,8 @@
-require "formula"
 require "language/go"
 require "yaml"
 
 class Siegfried < Formula
+  desc "Fast PRONOM-based file identification tool"
   homepage "http://www.itforarchivists.com/siegfried"
   url "https://github.com/richardlehane/siegfried/archive/v1.4.1.tar.gz"
   sha256 "e0534903e33fc2cdd79d5e943a91a39eae1673df53aee90f8a2ce58712117691"
