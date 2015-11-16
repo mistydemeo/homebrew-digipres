@@ -4,8 +4,8 @@ require "yaml"
 
 class Siegfried < Formula
   homepage "http://www.itforarchivists.com/siegfried"
-  url "https://github.com/richardlehane/siegfried/archive/v1.4.0.tar.gz"
-  sha256 "c5d0b0c41998d460c3c88004aaa9bf8cc0db34ba6775e1e725aeedc9ef21cf64"
+  url "https://github.com/richardlehane/siegfried/archive/v1.4.1.tar.gz"
+  sha256 "e0534903e33fc2cdd79d5e943a91a39eae1673df53aee90f8a2ce58712117691"
 
   depends_on "go" => :build
 
@@ -41,7 +41,7 @@ class Siegfried < Formula
 
   go_resource "golang.org/x/text" do
     url "https://github.com/golang/text.git",
-      :revision => "0fe7e6856182a6ebfcf1e6a7aa90bead9a8e1bc0"
+      :revision => "4b139bd6df30da3409365d90f851848508cdb48b"
   end
 
   def install
