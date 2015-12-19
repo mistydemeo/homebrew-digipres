@@ -4,8 +4,8 @@ require "yaml"
 class Siegfried < Formula
   desc "Fast PRONOM-based file identification tool"
   homepage "http://www.itforarchivists.com/siegfried"
-  url "https://github.com/richardlehane/siegfried/archive/v1.4.1.tar.gz"
-  sha256 "e0534903e33fc2cdd79d5e943a91a39eae1673df53aee90f8a2ce58712117691"
+  url "https://github.com/richardlehane/siegfried/archive/v1.4.3.tar.gz"
+  sha256 "1e6f9cb4a5125e82760f9aefe95b21663abf901c51dab0b59334c84f8f6b8367"
 
   depends_on "go" => :build
 
@@ -21,7 +21,7 @@ class Siegfried < Formula
 
   go_resource "github.com/richardlehane/mscfb" do
     url "https://github.com/richardlehane/mscfb.git",
-      :revision => "9c05c69abf63aec04cc637dcb82eb56fddd46250"
+      :revision => "104e4a4bd3638684d631003b2a3665902234f2bf"
   end
 
   go_resource "github.com/richardlehane/msoleps" do
@@ -31,17 +31,17 @@ class Siegfried < Formula
 
   go_resource "github.com/richardlehane/webarchive" do
     url "https://github.com/richardlehane/webarchive.git",
-      :revision => "f5489060c21bbdcd5f50fe733b14797de989bdf0"
+      :revision => "10a81c7ffea1bf70a2500daae57d74fbc4e7a747"
   end
 
   go_resource "golang.org/x/sys" do
     url "https://github.com/golang/sys.git",
-      :revision => "d9157a9621b69ad1d8d77a1933590c416593f24f"
+      :revision => "833a04a10549a95dc34458c195cbad61bbb6cb4d"
   end
 
   go_resource "golang.org/x/text" do
     url "https://github.com/golang/text.git",
-      :revision => "4b139bd6df30da3409365d90f851848508cdb48b"
+      :revision => "cf4986612c83df6c55578ba198316d1684a9a287"
   end
 
   def install
