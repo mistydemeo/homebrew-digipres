@@ -4,8 +4,8 @@ require "yaml"
 class Siegfried < Formula
   desc "Fast PRONOM-based file identification tool"
   homepage "http://www.itforarchivists.com/siegfried"
-  url "https://github.com/richardlehane/siegfried/archive/v1.4.3.tar.gz"
-  sha256 "1e6f9cb4a5125e82760f9aefe95b21663abf901c51dab0b59334c84f8f6b8367"
+  url "https://github.com/richardlehane/siegfried/archive/v1.4.4.tar.gz"
+  sha256 "e4bef91ef4f1dc3017c4a44bd5112a618e2766bcf0b09c7a3d8b031cd4a4f23a"
 
   depends_on "go" => :build
 
@@ -16,12 +16,12 @@ class Siegfried < Formula
 
   go_resource "github.com/richardlehane/characterize" do
     url "https://github.com/richardlehane/characterize.git",
-      :revision => "65ae777baca4bd03ec6457d4bf014a700fd0dd06"
+      :revision => "495548cd0c4fdf9a596bf3c501e9d1bf206f5b65"
   end
 
   go_resource "github.com/richardlehane/mscfb" do
     url "https://github.com/richardlehane/mscfb.git",
-      :revision => "104e4a4bd3638684d631003b2a3665902234f2bf"
+      :revision => "ed31f6daa61ce4289ae59cec80f902d0ff443128"
   end
 
   go_resource "github.com/richardlehane/msoleps" do
