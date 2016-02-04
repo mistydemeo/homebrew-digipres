@@ -6,6 +6,7 @@ class Siegfried < Formula
   homepage "http://www.itforarchivists.com/siegfried"
   url "https://github.com/richardlehane/siegfried/archive/v1.4.3.tar.gz"
   sha256 "1e6f9cb4a5125e82760f9aefe95b21663abf901c51dab0b59334c84f8f6b8367"
+  head "https://github.com/richardlehane/siegfried.git", :branch => "develop"
 
   depends_on "go" => :build
 
@@ -50,7 +51,10 @@ class Siegfried < Formula
     inreplace "config/brew.go", "/usr/share/siegfried", share/"siegfried"
 
     (buildpath/"src/github.com/richardlehane/siegfried").install Dir["*"]
-    Language::Go.stage_deps resources, buildpath/"src"
+    # HEAD uses vendored dependencies and doesn't require staging godeps
+    Language::Go.stage_deps resources, buildpath/"src" if build.stable?
+
+    ENV["GO15VENDOREXPERIMENT"] = "1"
     ENV["GOPATH"] = buildpath
 
     system "go", "build", "-tags", "brew",
