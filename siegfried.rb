@@ -18,8 +18,6 @@ class Siegfried < Formula
     mkdir_p buildpath/"src/github.com/richardlehane"
     ln_s buildpath, buildpath/"src/github.com/richardlehane/siegfried"
 
-    # Dependencies are vendored
-    ENV["GO15VENDOREXPERIMENT"] = "1"
     ENV["GOPATH"] = buildpath
 
     system "go", "build", "-tags", "brew",
