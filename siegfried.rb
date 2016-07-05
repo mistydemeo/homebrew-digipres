@@ -5,7 +5,7 @@ class Siegfried < Formula
   desc "Fast PRONOM-based file identification tool"
   homepage "http://www.itforarchivists.com/siegfried"
   url "https://github.com/richardlehane/siegfried/archive/v1.6.1.tar.gz"
-  sha256 "e1a575032cc37a921f765df8261e8eba33f19123155b8cccc90521b0a22450d8"
+  sha256 "4755273fa456540cde03a494b233f34756cfc265464206427393e325e16cb2cb"
   head "https://github.com/richardlehane/siegfried.git", :branch => "develop"
 
   depends_on "go" => :build
