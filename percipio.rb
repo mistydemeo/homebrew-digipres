@@ -1,11 +1,9 @@
-require 'formula'
-
 class Percipio < Formula
-  homepage 'https://github.com/anjackson/percipio'
-  url 'https://github.com/downloads/anjackson/percipio/percipio-0.0.2-SNAPSHOT-jar-with-dependencies.jar',
+  homepage "https://github.com/anjackson/percipio"
+  url "https://github.com/downloads/anjackson/percipio/percipio-0.0.2-SNAPSHOT-jar-with-dependencies.jar",
     :using => :nounzip
-  version '0.0.2-snapshot-20121116'
-  sha1 '4f463728867fb330c68ec8d1b6428821812f8124'
+  version "0.0.2-snapshot-20121116"
+  sha256 "8df3fdd01cfb549ed97e979ee86e94846d36ef38511859e5b363ccab1ff3fc7c"
 
   def install
     libexec.install "percipio-0.0.2-SNAPSHOT-jar-with-dependencies.jar" => "percipio.jar"
