@@ -1,9 +1,7 @@
-require 'formula'
-
 class AviMetaedit < Formula
-  homepage 'https://github.com/usnationalarchives/AVI-MetaEdit'
-  url 'https://github.com/mistydemeo/AVI-MetaEdit/tarball/1.0.0'
-  sha1 'fe6024f6c6efb4804ea42aa699d8076544c5f0b4'
+  homepage "https://github.com/usnationalarchives/AVI-MetaEdit"
+  url "https://github.com/mistydemeo/AVI-MetaEdit/tarball/1.0.0"
+  sha256 "cfc2d135a4b58108fdf0de9f8ba3b581e5c9f5a50fa891e87c745d3b8bd46af6"
 
   depends_on :autoconf
   depends_on :automake
@@ -15,7 +13,7 @@ class AviMetaedit < Formula
 
       system "./configure", "--disable-debug", "--disable-dependency-tracking",
                             "--prefix=#{prefix}"
-      system "make install"
+      system "make", "install"
     end
   end
 
