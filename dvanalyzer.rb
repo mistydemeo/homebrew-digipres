@@ -1,10 +1,8 @@
-require 'formula'
-
 class Dvanalyzer < Formula
-  homepage 'http://www.avpreserve.com/dvanalyzer/'
-  url 'http://download.mediaarea.net/binary/dvanalyzer/1.4.1/AVPS_DV_Analyzer_CLI_1.4.1_GNU_FromSource.tar.bz2'
-  version '1.4.1'
-  sha1 'd065aa7f01e4b2ec7feebf4e10f58b5a7dbbbc4f'
+  homepage "http://www.avpreserve.com/dvanalyzer/"
+  url "http://download.mediaarea.net/binary/dvanalyzer/1.4.1/AVPS_DV_Analyzer_CLI_1.4.1_GNU_FromSource.tar.bz2"
+  version "1.4.1"
+  sha256 "36531b67c37c530dbb2ddcd0ab0a5bcf075f202a97ee25b3a020ddcae7ba33e9"
 
   def install
     system "./CLI_Compile.sh"
