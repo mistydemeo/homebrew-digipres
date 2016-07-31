@@ -1,10 +1,8 @@
-require 'formula'
-
 class MetaExtractor < Formula
-  homepage 'http://meta-extractor.sourceforge.net/'
-  url 'http://downloads.sourceforge.net/project/meta-extractor/meta-extractor/3.5GA/meta-extractor-bin-3-5GA.tar.gz'
-  version '3.5GA'
-  sha1 '306cf51c2638877b8395305e241700912114969b'
+  homepage "http://meta-extractor.sourceforge.net/"
+  url "http://downloads.sourceforge.net/project/meta-extractor/meta-extractor/3.5GA/meta-extractor-bin-3-5GA.tar.gz"
+  version "3.5GA"
+  sha256 "600383a58ddec94ad45902638328f01db086eef054cf1d52679d41b949e152ad"
 
   def install
     %w[metadata.sh extract.sh].each do |file|
