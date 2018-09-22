@@ -14,7 +14,7 @@ class Droid < Formula
     bin.install "droid.sh" => "droid"
   end
 
-  def test
+  test do
     assert_equal "6.4", shell_output("#{bin}/droid --version").chomp
   end
 end
