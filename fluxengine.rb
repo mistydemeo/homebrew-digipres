@@ -4,6 +4,7 @@ class Fluxengine < Formula
   url "https://github.com/davidgiven/fluxengine.git", revision: "3e934a8527b723fa9fff4a98db473f4bfce393df"
   version "2022-06-17"
   license "MIT"
+  head "https://github.com/davidgiven/fluxengine.git"
 
   depends_on "coreutils" => :build
   depends_on "make" => :build
