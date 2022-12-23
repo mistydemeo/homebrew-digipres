@@ -1,6 +1,7 @@
 class Fido < Formula
   include Language::Python::Virtualenv
 
+  desc "Python command-line tool to identify the file formats of digital objects"
   homepage "https://github.com/openplanets/fido"
   url "https://files.pythonhosted.org/packages/26/34/7b997b3ba504d7ddb82007cda9cce37dc38db05ab58ba733a2eecd44cd60/opf-fido-1.6.1.tar.gz"
   sha256 "b601650af4adca0b9d05274c39505f4c592cf868598aa09ad21857f70ceda795"
@@ -53,7 +54,7 @@ class Fido < Formula
     virtualenv_install_with_resources
   end
 
-  def test
+  test do
     system "#{bin}/fido", "-v"
   end
 end
