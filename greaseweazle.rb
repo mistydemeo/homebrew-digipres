@@ -3,8 +3,8 @@ class Greaseweazle < Formula
 
   desc "Tools for accessing a floppy drive at the raw flux level"
   homepage "https://github.com/keirf/greaseweazle"
-  url "https://github.com/keirf/greaseweazle/releases/download/v1.2/greaseweazle-1.2.zip"
-  sha256 "600659c83a27b71a6863f1b5201c6a795759590f806562acccddd17e62230331"
+  url "https://github.com/keirf/greaseweazle/releases/download/v1.4/greaseweazle-1.4.zip"
+  sha256 "e9748d3f4a687579485093ad0732d570da9e242bda5bc600a1c10df46f9f9d2d"
   license "Unlicense"
 
   depends_on "python@3.10"
