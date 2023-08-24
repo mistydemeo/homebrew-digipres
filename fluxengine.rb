@@ -1,8 +1,8 @@
 class Fluxengine < Formula
   desc "PSOC5 floppy disk imaging interface"
   homepage "https://github.com/davidgiven/fluxengine"
-  url "https://github.com/davidgiven/fluxengine.git", revision: "3e934a8527b723fa9fff4a98db473f4bfce393df"
-  version "2022-06-17"
+  url "https://github.com/davidgiven/fluxengine.git", revision: "90da6b1e726db0cc960613b34a1d192b9e0e5817"
+  version "2023-08-08"
   license "MIT"
   head "https://github.com/davidgiven/fluxengine.git"
 
