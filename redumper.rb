@@ -2,9 +2,9 @@ class Redumper < Formula
   desc "Low level CD dumper utility"
   homepage "https://github.com/superg/redumper"
   # From-source build currently requires HEAD cmake on Mac
-  url "https://github.com/superg/redumper/releases/download/build_204/redumper-2023.08.12_build204-Darwin.zip"
-  version "204"
-  sha256 "9d21108f78d304f7e416565e35ff528edfd60029b95df324a2a06e3af569af3d"
+  url "https://github.com/superg/redumper/releases/download/build_247/redumper-2023.11.01_build247-Darwin.zip"
+  version "247"
+  sha256 "b93172971f812143e54d205237dbf7c76eedac09fdae5188bb1a1853086361fe"
   license "GPL-3.0-only"
 
   def install
