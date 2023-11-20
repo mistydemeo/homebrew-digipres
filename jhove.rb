@@ -1,19 +1,21 @@
 class Jhove < Formula
   homepage "http://jhove.openpreservation.org/"
-  url "https://github.com/openpreserve/jhove/releases/download/v1.11/jhove-1_11.tar.gz"
-  sha256 "c8099da227f5c48da8b45c41b0528054fbb9dd7545c33dd5bbf19c31281df614"
+  url "https://github.com/openpreserve/jhove/archive/v1.14.6.tar.gz"
+  sha256 "516f22ab75d9d68ad12d5726b28d9dbc9364b69052e24c33c7ff9d62f82b7e4f"
+
+  depends_on "maven"
 
   def install
-    inreplace "conf/jhove.conf", "/users/stephen/projects/jhove", libexec
-    inreplace "jhove.tmpl" do |s|
+    inreplace "jhove-installer/src/main/scripts/jhove.tmpl" do |s|
       s.change_make_var! "JHOVE_HOME", libexec
       s.change_make_var! "JAVA_HOME", "/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home"
-      s.gsub! "${JHOVE_HOME}/bin/", "${JHOVE_HOME}/"
+      s.change_make_var! "CP", "${JHOVE_HOME}/jhove-apps-1.14.0.jar:${EXTRA_JARS}"
     end
+    
+    system 'mvn', 'package'
 
-    bin.install "jhove.tmpl" => "jhove"
-    libexec.install Dir["bin/*.jar"]
-    libexec.install "conf"
+    bin.install "jhove-installer/src/main/scripts/jhove.tmpl" => "jhove"
+    libexec.install Dir["jhove-installer/target/staging/bin/*.jar"]
   end
 
   test do
