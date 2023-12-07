@@ -1,8 +1,8 @@
 class DiscImageCreator < Formula
   desc "Low-level optical disc archiving tool"
   homepage "https://github.com/saramibreak/DiscImageCreator"
-  url "https://github.com/saramibreak/DiscImageCreator/files/12565312/DiscImageCreator_20230909.tar.gz"
-  sha256 "224c0f12f179d1b5055edba296e96a91e335a1f823e33bf6441415a43d3b97ab"
+  url "https://github.com/saramibreak/DiscImageCreator/files/13527858/DiscImageCreator_20231201.tar.gz"
+  sha256 "79bfc714d54f0a3815f55f787ea57fd524cd73e62ee3e0d813f053b9d17f94c0"
   license "Apache-2.0"
 
   def install
