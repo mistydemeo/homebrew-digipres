@@ -11,9 +11,6 @@ class Redumper < Formula
   depends_on "llvm"
 
   def install
-    # Binary dynamically links against an unspecified Homebrew-provided
-    # LLVM libc++; assuming for now it's safe without it since that's
-    # how it's distributed?
     bin.install Dir["bin/*"]
   end
 
