@@ -6,17 +6,17 @@ class FluxengineGui < Formula
   license "MIT"
   head "https://github.com/davidgiven/fluxengine.git"
 
-  depends_on "coreutils" => :build
-  depends_on "make" => :build
-  depends_on "ninja" => :build
-  depends_on "pkg-config" => :build
-  depends_on "abseil"
-  depends_on "fmt"
-  depends_on "jpeg"
-  depends_on "protobuf"
+  # dependencies from https://github.com/davidgiven/fluxengine/blob/master/.github/workflows/release.yml
   depends_on "sqlite3"
-  depends_on "zlib"
+  depends_on "pkg-config" => :build
+  depends_on "libusb"
+  depends_on "protobuf"
   depends_on "wxwidgets"
+  depends_on "fmt"
+  depends_on "make" => :build
+  depends_on "coreutils" => :build
+  depends_on "dylibbundler"
+  depends_on "libjpeg"
 
   def install
     system "#{Formula["make"].opt_bin}/gmake", "fluxengine-gui"
