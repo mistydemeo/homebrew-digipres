@@ -9,30 +9,6 @@ class Greaseweazle < Formula
 
   depends_on "python@3.12"
 
-  resource "crcmod" do
-  end
-
-  resource "bitarray" do
-  end
-
-  resource "pyserial" do
-  end
-
-  resource "requests" do
-  end
-
-  resource "urllib3" do
-  end
-
-  resource "charset-normalizer" do
-  end
-
-  resource "certifi" do
-  end
-
-  resource "idna" do
-  end
-
   resource "bitarray" do
     url "https://files.pythonhosted.org/packages/95/06/92fdc84448d324ab8434b78e65caf4fb4c6c90b4f8ad9bdd4c8021bfaf1e/bitarray-3.8.0.tar.gz"
     sha256 "3eae38daffd77c9621ae80c16932eea3fb3a4af141fb7cc724d4ad93eff9210d"
