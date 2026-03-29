@@ -4,8 +4,8 @@ require "yaml"
 class Siegfried < Formula
   desc "Fast PRONOM-based file identification tool"
   homepage "http://www.itforarchivists.com/siegfried"
-  url "https://github.com/richardlehane/siegfried/archive/v1.4.5.tar.gz"
-  sha256 "7d32f523e2697f32fc3e9e8d61d3174e26edb86280ef26bbc1d09a930382c8c7"
+  url "https://github.com/richardlehane/siegfried/archive/v1.6.1.tar.gz"
+  sha256 "823b251dcc507eb819c51928ac100310718fa7a35afc6fedf1ffe2441da667b6"
   head "https://github.com/richardlehane/siegfried.git", :branch => "develop"
 
   depends_on "go" => :build
